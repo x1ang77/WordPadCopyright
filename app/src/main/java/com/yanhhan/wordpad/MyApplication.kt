@@ -1,7 +1,7 @@
-package com.nathalie.wordpad
+package com.yanhhan.wordpad
 
 import android.app.Application
-import com.nathalie.wordpad.repository.WordRepository
+import com.yanhhan.wordpad.repository.WordRepository
 
 class MyApplication : Application() {
     val wordRepo = WordRepository.getInstance()

@@ -1,21 +1,17 @@
-package com.nathalie.wordpad.ui
+package com.yanhhan.wordpad.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nathalie.wordpad.MainActivity
-import com.nathalie.wordpad.MyApplication
-import com.nathalie.wordpad.R
-import com.nathalie.wordpad.adapters.WordAdapter
+import com.yanhhan.wordpad.MainActivity
+import com.yanhhan.wordpad.WordAdapter
 import com.nathalie.wordpad.databinding.FragmentWordsBinding
-import com.nathalie.wordpad.viewModels.WordsViewModel
+import com.yanhhan.wordpad.viewModels.WordsViewModel
 
 class WordsFragment : Fragment() {
     private lateinit var adapter: WordAdapter
@@ -39,10 +35,6 @@ class WordsFragment : Fragment() {
         binding.efabAddNewItem.setOnClickListener {
             val action = MainFragmentDirections.actionMainToAddWord()
             NavHostFragment.findNavController(this).navigate(action)
-        }
-
-        viewModel.words.observe(viewLifecycleOwner) {
-            adapter.setWords(it)
         }
 
         viewModel.words.observe(viewLifecycleOwner) {

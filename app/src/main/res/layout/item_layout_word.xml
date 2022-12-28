@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    app:cardBackgroundColor="@color/coral"
+    app:cardBackgroundColor="@color/blue"
     app:cardCornerRadius="10dp"
     app:cardElevation="10dp">
 
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Title"
-            android:textColor="@color/app_bg"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:maxLines="3"
             android:minLines="2"
             android:text="Meaning"
-            android:textColor="@color/app_bg"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
     </LinearLayout>

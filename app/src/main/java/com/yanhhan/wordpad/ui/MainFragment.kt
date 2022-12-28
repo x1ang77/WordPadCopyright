@@ -1,4 +1,4 @@
-package com.nathalie.wordpad.ui
+package com.yanhhan.wordpad.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -9,11 +9,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import com.google.android.material.tabs.TabLayoutMediator
-import com.nathalie.wordpad.MainActivity
-import com.nathalie.wordpad.R
-import com.nathalie.wordpad.adapters.ViewPagerAdapter
+import com.yanhhan.wordpad.MainActivity
+import com.yanhhan.wordpad.ViewPagerAdapter
 import com.nathalie.wordpad.databinding.FragmentMainBinding
-import com.nathalie.wordpad.viewModels.WordsViewModel
+import com.yanhhan.wordpad.viewModels.WordsViewModel
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
@@ -43,13 +42,33 @@ class MainFragment : Fragment() {
         binding.vpWordPad.adapter = adapter
 
         TabLayoutMediator(binding.tlWordPad, binding.vpWordPad) { tab, pos ->
+            Log.d("eiyo",pos.toString())
             tab.text = when (pos) {
-                0 -> "Files"
-                else -> "Gallery"
+                0 -> "New Word"
+                else -> "Completed Word"
             }
         }.attach()
 
         setFragmentResultListener("from_add_item") { _, result ->
+            val refresh = result.getBoolean("refresh")
+            if (refresh) {
+                wordsFragment.refresh()
+            }
+        }
+        setFragmentResultListener("from_details") { _, result ->
+            val refresh = result.getBoolean("refresh")
+            if (refresh) {
+                wordsFragment.refresh()
+            }
+        }
+        setFragmentResultListener("from-details-done") { _, result ->
+            val refresh = result.getBoolean("refresh")
+            if (refresh) {
+                wordsFragment.refresh()
+                completedWordsFragment.refresh()
+            }
+        }
+        setFragmentResultListener("from_edit"){_,result->
             val refresh = result.getBoolean("refresh")
             if (refresh) {
                 wordsFragment.refresh()

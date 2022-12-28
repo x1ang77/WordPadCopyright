@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Custom.ThemeOverlay.App.MaterialAlertDialog.Default" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/Custom.AlertDialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Custom.AlertDialog.Button.Default</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Custom.AlertDialog.Button.Default</item>
+
+    </style>
+
+    <style name="Custom.AlertDialog.Button.Default" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+    </style>
+
+    <style name="Custom.AlertDialog" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/Custom.ShapeAppearance.App.MediumComponent</item>
+
+    </style>
+
+    <style name="Custom.ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+    <item name="cornerSize">6dp</item>
+    </style>
+</resources>

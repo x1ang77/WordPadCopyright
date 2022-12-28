@@ -1,12 +1,12 @@
-package com.nathalie.wordpad.viewModels
+package com.yanhhan.wordpad.viewModels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.nathalie.wordpad.Model.Word
-import com.nathalie.wordpad.repository.WordRepository
+import com.yanhhan.wordpad.Model.Word
+import com.yanhhan.wordpad.repository.WordRepository
 
-class UpdateWordViewModel(private val repo: WordRepository) : ViewModel() {
+class DetailsViewModel(private val repo: WordRepository) : ViewModel() {
     val word: MutableLiveData<Word> = MutableLiveData()
 
     fun getWordById(id: Long) {
@@ -15,19 +15,16 @@ class UpdateWordViewModel(private val repo: WordRepository) : ViewModel() {
             word.value = it
         }
     }
-
-    fun deleteWord(id: Long) {
+    fun deleteWord(id:Long){
         repo.deleteWord(id)
     }
-
-
-    fun updateWord(id: Long, word: Word) {
-        repo.updateWord(id, word)
+    fun completedWord(id:Long){
+        repo.completedWord(id)
     }
 
     class Provider(val repo: WordRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return UpdateWordViewModel(repo) as T
+            return DetailsViewModel(repo) as T
         }
     }
 }

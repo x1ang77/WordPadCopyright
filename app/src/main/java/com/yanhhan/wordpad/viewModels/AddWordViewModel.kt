@@ -1,10 +1,10 @@
-package com.nathalie.wordpad.viewModels
+package com.yanhhan.wordpad.viewModels
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.nathalie.wordpad.Model.Word
-import com.nathalie.wordpad.repository.WordRepository
+import com.yanhhan.wordpad.Model.Word
+import com.yanhhan.wordpad.repository.WordRepository
 
 class AddWordViewModel(private val repo: WordRepository) : ViewModel() {
     fun addWord(word: Word) {

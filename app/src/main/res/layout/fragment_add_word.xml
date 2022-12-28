@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg"
     android:padding="24dp"
-    tools:context=".ui.AddWordFragment"
+    tools:context="com.yanhhan.wordpad.ui.AddWordFragment"
     tools:layout_editor_absoluteX="4dp"
     tools:layout_editor_absoluteY="1dp">
 

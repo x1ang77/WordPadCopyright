@@ -6,7 +6,7 @@
     android:padding="24dp"
     android:background="@color/app_bg"
     android:layout_height="match_parent"
-    tools:context=".ui.WordsFragment">
+    tools:context="com.yanhhan.wordpad.ui.WordsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"

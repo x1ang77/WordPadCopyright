@@ -6,8 +6,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:weightSum="1"
-    tools:context=".ui.MainFragment">
+    tools:context="com.yanhhan.wordpad.ui.MainFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:background="@color/blue"
+        android:weightSum="1"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:layout_marginLeft="4dp"
+            android:hint="Search"
+            android:background="@drawable/search"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sort"
+            android:backgroundTint="@color/blue"/>
 
+    </LinearLayout>
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vpWordPad"
         android:layout_width="match_parent"

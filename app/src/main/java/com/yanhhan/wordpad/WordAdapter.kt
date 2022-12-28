@@ -1,9 +1,9 @@
-package com.nathalie.wordpad.adapters
+package com.yanhhan.wordpad
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.nathalie.wordpad.Model.Word
+import com.yanhhan.wordpad.Model.Word
 import com.nathalie.wordpad.databinding.ItemLayoutWordBinding
 
 class WordAdapter(

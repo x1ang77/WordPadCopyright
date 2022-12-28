@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.nathalie.wordpad.ui.MainFragment"
+        android:name="com.yanhhan.wordpad.ui.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.nathalie.wordpad.ui.DetailsFragment"
+        android:name="com.yanhhan.wordpad.ui.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details">
         <argument
@@ -32,12 +32,12 @@
     </fragment>
     <fragment
         android:id="@+id/addWordFragment"
-        android:name="com.nathalie.wordpad.ui.AddWordFragment"
+        android:name="com.yanhhan.wordpad.ui.AddWordFragment"
         android:label="fragment_add_word"
         tools:layout="@layout/fragment_add_word" />
     <fragment
         android:id="@+id/updateWordFragment"
-        android:name="com.nathalie.wordpad.ui.UpdateWordFragment"
+        android:name="com.yanhhan.wordpad.ui.UpdateWordFragment"
         android:label="fragment_update_word"
         tools:layout="@layout/fragment_update_word">
         <argument

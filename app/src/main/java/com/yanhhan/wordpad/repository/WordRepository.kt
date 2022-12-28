@@ -1,17 +1,25 @@
-package com.nathalie.wordpad.repository
+package com.yanhhan.wordpad.repository
 
 import android.util.Log
-import com.nathalie.wordpad.Model.Word
+import com.yanhhan.wordpad.Model.Word
 
 class WordRepository {
-    private var counter = 0L
+    private var counter = 2L
     private val wordsMap: MutableMap<Long, Word> = mutableMapOf(
         0L to Word(
             0L,
             "Metanoia",
             "The journey of changing one's word, heart or a way ot life.",
             "something",
-            "something"
+            "something",
+            false
+        ), 1L to Word(
+            1L,
+            "Metanoia",
+            "The journey of changing one's word, heart or a way ot life.",
+            "something",
+            "something",
+            true
         )
     )
 
@@ -35,6 +43,12 @@ class WordRepository {
 
     fun deleteWord(id: Long) {
         wordsMap.remove(id)
+    }
+    fun completedWord(id:Long):Word?{
+
+            wordsMap[id]?.completed=true
+        Log.d("halp",wordsMap[id].toString())
+        return wordsMap[id]
     }
 
     companion object {

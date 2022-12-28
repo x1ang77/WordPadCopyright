@@ -1,4 +1,4 @@
-package com.nathalie.wordpad.ui
+package com.yanhhan.wordpad.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,11 +9,10 @@ import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
-import com.nathalie.wordpad.Model.Word
-import com.nathalie.wordpad.MyApplication
-import com.nathalie.wordpad.R
+import com.yanhhan.wordpad.Model.Word
+import com.yanhhan.wordpad.MyApplication
 import com.nathalie.wordpad.databinding.FragmentUpdateWordBinding
-import com.nathalie.wordpad.viewModels.UpdateWordViewModel
+import com.yanhhan.wordpad.viewModels.UpdateWordViewModel
 
 class UpdateWordFragment : Fragment() {
     private lateinit var binding: FragmentUpdateWordBinding

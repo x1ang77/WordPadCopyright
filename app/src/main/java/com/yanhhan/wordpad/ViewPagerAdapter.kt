@@ -1,4 +1,4 @@
-package com.nathalie.wordpad.adapters
+package com.yanhhan.wordpad
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
