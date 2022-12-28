@@ -23,6 +23,7 @@ class WordsFragment : Fragment() {
     private val viewModel: WordsViewModel by viewModels {
         WordsViewModel.Provider((requireActivity() as MainActivity).wordRepo)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

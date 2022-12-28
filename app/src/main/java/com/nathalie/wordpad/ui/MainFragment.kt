@@ -18,6 +18,7 @@ import com.nathalie.wordpad.viewModels.WordsViewModel
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
     private val wordsFragment = WordsFragment.getInstance()
+
     private val completedWordsFragment = CompletedWordsFragment.getInstance()
     private val viewModel: WordsViewModel by viewModels {
         WordsViewModel.Provider((requireActivity() as MainActivity).wordRepo)
@@ -35,7 +36,9 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = ViewPagerAdapter(
-            listOf(wordsFragment, completedWordsFragment),
+            listOf(
+                wordsFragment, completedWordsFragment
+            ),
             requireActivity().supportFragmentManager,
             lifecycle
         )
