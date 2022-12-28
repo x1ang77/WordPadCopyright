@@ -15,8 +15,8 @@ class WordRepository {
         )
     )
 
-    fun getWords(): List<Word> {
-        return wordsMap.values.toList()
+    fun getWords(str: String, status:Boolean = false): List<Word> {
+        return wordsMap.filter { (key, value) -> Regex(str).containsMatchIn(value.title) && value.status == status }.values.toList()
     }
 
     fun addWord(word: Word): Word? {
@@ -28,13 +28,18 @@ class WordRepository {
         return wordsMap[id]
     }
 
-    fun updateWord(id: Long, note: Word): Word? {
-        wordsMap[id] = note
+    fun updateWord(id: Long, word: Word): Word? {
+        wordsMap[id] = word
         return wordsMap[id]
     }
 
     fun deleteWord(id: Long) {
         wordsMap.remove(id)
+    }
+
+    fun changeStatus(id: Long): Word? {
+        wordsMap[id]?.status = !wordsMap[id]?.status!!
+        return wordsMap[id]
     }
 
     companion object {

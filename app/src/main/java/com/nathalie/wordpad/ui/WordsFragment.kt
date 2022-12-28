@@ -46,13 +46,11 @@ class WordsFragment : Fragment() {
             adapter.setWords(it)
         }
 
-        viewModel.words.observe(viewLifecycleOwner) {
-            adapter.setWords(it)
-        }
+
     }
 
-    fun refresh() {
-        viewModel.getWords()
+    fun refresh(str: String, status: Boolean) {
+        viewModel.getWords(str, status)
     }
 
     fun setupAdapter() {
