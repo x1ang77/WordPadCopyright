@@ -22,9 +22,9 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="4dp"
             android:layout_weight="1"
+            android:background="@drawable/search_input"
             android:hint="Search"
             android:padding="8dp"
-            android:background="@drawable/search_input"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
